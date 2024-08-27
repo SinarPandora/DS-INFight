@@ -25,7 +25,7 @@
       <action-card height="100">
         <template #default="{ isHovering }">
           <div class="fill-height d-flex justify-center align-center">
-            <v-icon size="60" :color="emptyIconColor(isHovering)" icon="mdi-plus-circle-outline" />
+            <v-icon size="60" :color="emptyIconColor(isHovering!)" icon="mdi-plus-circle-outline" />
           </div>
         </template>
       </action-card>

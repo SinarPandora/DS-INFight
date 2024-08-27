@@ -1,4 +1,5 @@
 import { app, BrowserWindow, ipcMain } from 'electron'
+
 /**
  * 初始化 Election Api
  *

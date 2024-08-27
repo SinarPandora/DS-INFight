@@ -2,6 +2,7 @@ import { contextBridge, ipcRenderer } from 'electron'
 import { electronAPI } from '@electron-toolkit/preload'
 
 // Custom APIs for renderer
+// noinspection JSUnusedGlobalSymbols
 const api = {
   quitApp: () => ipcRenderer.send('quitApp'),
   mainWindow: {
