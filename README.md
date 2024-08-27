@@ -10,8 +10,6 @@
 感谢 Jetbrains 提供的免费开源证书支持！Jetbrains 系列 IDE，人体工学，纵享丝滑
 ![Jetbrains logo](https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains.png)
 
-感谢开源 Electron + Vue3 项目模板：Deluze/electron-vue-template
-
 ## 开发进度
 
 [设计文档](https://docs.qq.com/doc/DRkVCcUtBbHFoYmpT?is_no_hook_redirect=1)
@@ -27,6 +25,6 @@ TODO
 
 ## 技术栈
 
-- Electron
+- Electron(electron-vite)
 - Vue3 + Vuetify3
 - SQLite
