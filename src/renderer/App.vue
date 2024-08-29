@@ -4,7 +4,7 @@
     <v-app-bar
       style="-webkit-app-region: drag"
       density="compact"
-      :color="isDarkTheme() ? 'deep-purple-darken-1' : 'deep-purple-darken-3'"
+      :color="isDarkTheme ? 'deep-purple-darken-1' : 'deep-purple-darken-3'"
     >
       <v-app-bar-title>{{ pageTitle }}</v-app-bar-title>
       <v-spacer />

@@ -10,6 +10,7 @@ import '@mdi/font/css/materialdesignicons.css'
 import App from './App.vue'
 import { useDark } from '@vueuse/core'
 import { router } from './router'
+import { themes } from './assets/themes'
 
 const isDark = useDark()
 
@@ -17,7 +18,8 @@ const vuetify = createVuetify({
   components,
   directives,
   theme: {
-    defaultTheme: isDark.value ? 'dark' : 'light'
+    defaultTheme: isDark.value ? 'dark' : 'light',
+    themes
   }
 })
 

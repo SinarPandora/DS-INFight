@@ -4,7 +4,7 @@
     <v-col cols="4">
       <v-row>
         <v-col v-for="(btn, i) in functionBtn" :key="i" cols="12">
-          <action-card>
+          <action-card hover-color="secondary">
             <template #default>
               <v-card-title>
                 <v-icon :icon="btn.icon" />
@@ -20,25 +20,25 @@
     <v-col cols="4">
       <v-row>
         <v-col cols="12">
-          <action-card hover-color="warning" height="165">
+          <action-card height="165">
             <template #default>
               <v-card-title>
                 <v-icon icon="mdi-fencing" />
                 随机匹配
               </v-card-title>
-              <v-card-text> 随机寻找「旗鼓相当」的契约者</v-card-text>
+              <v-card-text>随机寻找「旗鼓相当」的契约者</v-card-text>
             </template>
           </action-card>
         </v-col>
 
         <v-col cols="12">
-          <action-card height="170">
+          <action-card height="170" hover-color="info">
             <template #default>
               <v-card-title>
                 <v-icon icon="mdi-rodent" />
                 PVE 自由对战
               </v-card-title>
-              <v-card-text> 与模拟对手对战，检验你的配队思路，同时还能获得合成素材</v-card-text>
+              <v-card-text>与模拟对手对战，检验你的配队思路，同时还能获得合成素材</v-card-text>
             </template>
           </action-card>
         </v-col>
@@ -54,7 +54,7 @@
           </v-card-title>
           <v-card-text>
             向世界第一发起挑战！
-            <v-chip class="mt-4"> 当前排名：1200</v-chip>
+            <v-chip class="mt-4">当前排名：1200</v-chip>
           </v-card-text>
         </template>
       </action-card>

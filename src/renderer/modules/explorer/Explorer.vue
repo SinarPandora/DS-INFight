@@ -1,61 +1,74 @@
 <template>
-  <v-row>
-    <v-col v-for="(area, i) in areas" :key="i" class="position-relative" cols="4">
-      <action-card padding="0">
-        <template #default>
-          <v-img :src="area.img" cover />
-          <v-card-subtitle class="text-center mt-1">
-            {{ area.name }}
-          </v-card-subtitle>
-        </template>
-      </action-card>
-
-      <div v-if="area.badgeColor" style="position: absolute; top: 5px; right: 5px">
-        <v-chip variant="flat" size="x-small" rounded :color="area.badgeColor">
-          {{ area.badgeText }}
-        </v-chip>
-      </div>
-    </v-col>
-  </v-row>
+  <v-data-table class="mb-3" hover expand-on-click :headers="headers" :items="items" items-per-page="5">
+    <!-- 进度 -->
+    <template #[`item.progress`]="{ value }">
+      <progress-bar color="info" :value="value" :max="20" unit=" 分钟" />
+    </template>
+    <!-- 名称 -->
+    <template #[`item.name`]="{ item }">
+      <v-sheet color="transparent" class="d-flex align-center">
+        <v-avatar :image="`../../assets/graphs/Battlers/Avatars/${item.id}.png`" />
+        <span class="ml-4">{{ item.name }}</span>
+      </v-sheet>
+    </template>
+    <!-- 去掉底栏 -->
+    <template #bottom />
+  </v-data-table>
+  <map-selector>
+    <template #default="{ activatorProps }">
+      <v-btn block v-bind="activatorProps" text="开始新的探索" color="info" />
+    </template>
+  </map-selector>
 </template>
 
 <script setup lang="ts">
+import MapSelector from './MapSelector.vue'
 import { ref } from 'vue'
-import ActionCard from '../../components/ActionCard.vue'
+import ProgressBar from '../../components/ProgressBar.vue'
 
-const getImgPath = (name: string) => new URL(`../../assets/graphs/System/MapPictures/${name}.png`, import.meta.url).href
+type ExplorerMetric = {
+  id: number
+  name: string
+  area: string
+  progress: number
+}
 
-const areas = ref([
-  // assets/graphs/System/MapPictures/flying26.png
-  {
-    name: '废弃矿洞',
-    img: getImgPath('flying26'),
-    badgeColor: 'primary',
-    badgeText: '自动探索中'
-  },
-  {
-    name: '森林',
-    img: getImgPath('flying11')
-  },
-  {
-    name: '燃烧地牢',
-    img: getImgPath('flying15')
-  },
-  {
-    name: '雪山',
-    img: getImgPath('flying18')
-  },
-  {
-    name: '寒冰地牢',
-    img: getImgPath('flying19'),
-    badgeColor: 'success',
-    badgeText: '新增'
-  },
-  {
-    name: '采购',
-    img: getImgPath('flying2')
-  }
+const headers = ref([
+  { title: '龙魂', key: 'name' },
+  { title: '区域', key: 'area' },
+  { title: '进度', key: 'progress', width: '30%' }
 ])
-</script>
 
-<style scoped></style>
+const items = ref([
+  {
+    id: 1,
+    name: '测试1',
+    area: '森林',
+    progress: 0
+  },
+  {
+    id: 2,
+    name: '测试2',
+    area: '湖泊',
+    progress: 0.6
+  },
+  {
+    id: 3,
+    name: '测试3',
+    area: '地牢',
+    progress: 0.8
+  },
+  {
+    id: 4,
+    name: '测试4',
+    area: '地牢',
+    progress: 0.5
+  },
+  {
+    id: 5,
+    name: '测试5',
+    area: '地牢',
+    progress: 0.2
+  }
+] as ExplorerMetric[])
+</script>

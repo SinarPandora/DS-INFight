@@ -6,7 +6,7 @@
           喵君
           <v-icon size="small" icon="mdi-pencil" />
           <v-spacer />
-          <v-chip> 天梯排名：1200</v-chip>
+          <v-chip>天梯排名：1200</v-chip>
         </v-card-title>
         <v-container fluid>
           <v-row>

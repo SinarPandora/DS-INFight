@@ -1,9 +1,9 @@
 <template>
   <!-- max height: 380 -->
   <v-tabs v-model="tab" fixed-tabs>
-    <v-tab value="p1" append-icon="mdi-pencil"> 队伍 1</v-tab>
-    <v-tab value="p2"> 队伍 2</v-tab>
-    <v-tab value="p3"> 队伍 3</v-tab>
+    <v-tab value="p1" append-icon="mdi-pencil">队伍 1</v-tab>
+    <v-tab value="p2">队伍 2</v-tab>
+    <v-tab value="p3">队伍 3</v-tab>
   </v-tabs>
 
   <v-tabs-window v-model="tab" class="fill-height">
@@ -27,7 +27,7 @@
                   测试龙魂
                   <v-icon class="float-end" icon="mdi-weather-windy-variant" />
                 </v-card-title>
-                <v-card-subtitle> LV：20</v-card-subtitle>
+                <v-card-subtitle>LV：20</v-card-subtitle>
               </v-card>
             </template>
           </v-hover>
@@ -50,7 +50,7 @@
                       燃烧之魂
                       <v-icon class="float-end" icon="mdi-fire" />
                     </v-card-title>
-                    <v-card-text> 效果 xxxx</v-card-text>
+                    <v-card-text>效果 xxxx</v-card-text>
                   </v-card>
                 </template>
               </v-hover>
@@ -59,8 +59,8 @@
         </v-col>
       </v-row>
     </v-tabs-window-item>
-    <v-tabs-window-item value="p2"> 待补充</v-tabs-window-item>
-    <v-tabs-window-item value="p3"> 待补充</v-tabs-window-item>
+    <v-tabs-window-item value="p2">待补充</v-tabs-window-item>
+    <v-tabs-window-item value="p3">待补充</v-tabs-window-item>
   </v-tabs-window>
 </template>
 

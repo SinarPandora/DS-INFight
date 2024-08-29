@@ -15,19 +15,19 @@
                 <template #prepend>
                   <v-icon icon="mdi-water" />
                 </template>
-                <v-list-item-title> 水</v-list-item-title>
+                <v-list-item-title>水</v-list-item-title>
               </v-list-item>
               <v-list-item>
                 <template #prepend>
                   <v-icon icon="mdi-numeric-1-circle-outline" />
                 </template>
-                <v-list-item-title> 龙薄荷</v-list-item-title>
+                <v-list-item-title>龙薄荷</v-list-item-title>
               </v-list-item>
               <v-list-item>
                 <template #prepend>
                   <v-icon icon="mdi-numeric-2-circle-outline" />
                 </template>
-                <v-list-item-title> 巧克力</v-list-item-title>
+                <v-list-item-title>巧克力</v-list-item-title>
               </v-list-item>
             </v-list>
           </v-sheet>
@@ -36,10 +36,10 @@
         <v-col cols="12">
           <v-row dense>
             <v-col cols="12">
-              <v-chip color="warning" variant="flat"> 强效增益：训练时间减半</v-chip>
+              <v-chip color="warning" variant="flat">强效增益：训练时间减半</v-chip>
             </v-col>
             <v-col cols="12">
-              <v-chip color="primary" variant="flat"> 增益：额外获得 3 点攻击</v-chip>
+              <v-chip color="primary" variant="flat">增益：额外获得 3 点攻击</v-chip>
             </v-col>
           </v-row>
         </v-col>
@@ -63,8 +63,8 @@
                       测试素材 {{ i }} x {{ i }}
                     </v-card-title>
                     <v-container fluid class="pa-2">
-                      <v-chip size="small" variant="flat" color="primary" class="mr-2"> 液体</v-chip>
-                      <v-chip size="small" variant="flat"> 净化</v-chip>
+                      <v-chip size="small" variant="flat" color="primary" class="mr-2">液体</v-chip>
+                      <v-chip size="small" variant="flat">净化</v-chip>
                     </v-container>
                   </template>
                 </action-card>
@@ -77,11 +77,11 @@
           <v-sheet height="100" class="pa-4" border rounded>
             <p>
               配方参考：
-              <v-chip color="primary" variant="flat"> 液体</v-chip>
+              <v-chip color="primary" variant="flat">液体</v-chip>
               +
-              <v-chip color="primary" variant="flat"> 提神</v-chip>
+              <v-chip color="primary" variant="flat">提神</v-chip>
               +
-              <v-chip variant="flat"> 任意素材</v-chip>
+              <v-chip variant="flat">任意素材</v-chip>
             </p>
             <p class="mt-2">基础效果：减少训练所需时间</p>
           </v-sheet>

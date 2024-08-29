@@ -22,7 +22,7 @@
 const prop = defineProps({
   hoverColor: {
     type: String,
-    default: 'info'
+    default: 'primary'
   },
   color: {
     type: String,
